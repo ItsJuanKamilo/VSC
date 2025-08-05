@@ -1,125 +1,76 @@
-# Sobrapp - Plataforma de Entregas
-
-Una aplicación moderna para conectar clientes que necesitan enviar sobres con motociclistas disponibles para entregas, desarrollada con React, TypeScript y Material-UI.
-
-## 🚀 Características
-
-### Para Clientes
-- **Registro y autenticación** de usuarios
-- **Crear solicitudes de entrega** con origen, destino, urgencia y precio
-- **Seguimiento en tiempo real** del estado de las entregas
-- **Historial completo** de todas las entregas realizadas
-- **Confirmación de entregas** cuando son completadas
-
-### Para Motociclistas
-- **Ver entregas disponibles** en tiempo real
-- **Aceptar entregas** con un solo clic
-- **Iniciar y completar entregas** con actualizaciones de estado
-- **Navegación integrada** hacia destinos
-- **Ganancias y estadísticas** de rendimiento
-
-### Características Generales
-- **Diseño responsive** que funciona en desktop, tablet y móvil
-- **Interfaz moderna** con Material-UI y animaciones suaves
-- **Navegación intuitiva** con sidebar y breadcrumbs
-- **Notificaciones en tiempo real** para actualizaciones de estado
-- **Validación de formularios** en tiempo real
-- **Manejo de errores** robusto y user-friendly
-
-## 🛠️ Tecnologías Utilizadas
-
-### Frontend
-- **React 18** - Biblioteca de interfaz de usuario
-- **TypeScript** - Tipado estático para mejor desarrollo
-- **Material-UI (MUI)** - Componentes de UI modernos y accesibles
-- **React Router DOM** - Navegación entre páginas
-- **Framer Motion** - Animaciones fluidas y atractivas
-
-### Backend
-- **Supabase** - Backend-as-a-Service con PostgreSQL
-- **PostgreSQL** - Base de datos relacional
-- **Row Level Security (RLS)** - Seguridad a nivel de fila
-- **bcryptjs** - Hashing seguro de contraseñas
-
-### Herramientas de Desarrollo
-- **Create React App** - Configuración inicial del proyecto
-- **ESLint** - Linting de código
-- **Prettier** - Formateo de código
-
-## 🏗️ Estructura del Proyecto
-
-```
-src/
-├── components/          # Componentes reutilizables
-│   ├── AppNavigator.tsx
-│   ├── DeliveryCard.tsx
-│   ├── ErrorBoundary.tsx
-│   ├── LoginScreen.tsx
-│   ├── MainLayout.tsx
-│   ├── RegisterScreen.tsx
-│   ├── SplashScreen.tsx
-│   └── UserTypeScreen.tsx
-├── config/             # Configuraciones
-│   └── supabase.ts
-├── context/            # Contextos de React
-│   └── NavigationContext.tsx
-├── screens/            # Pantallas principales
-│   ├── AvailableDeliveriesScreen.tsx
-│   ├── CreateDeliveryScreen.tsx
-│   ├── DeliveriesScreen.tsx
-│   ├── HomeScreen.tsx
-│   ├── NavigationScreen.tsx
-│   └── ProfileScreen.tsx
-├── services/           # Servicios de API
-│   ├── authService.ts
-│   └── deliveryService.ts
-├── types/              # Definiciones de tipos TypeScript
-│   └── index.ts
-├── utils/              # Utilidades y helpers
-│   ├── constants.ts
-│   └── errorHandler.ts
-├── App.tsx             # Componente principal
-└── index.tsx           # Punto de entrada
-```
-
-## 📱 Uso de la Aplicación
-
-### Registro y Autenticación
-1. Selecciona tu tipo de usuario (Cliente o Motociclista)
-2. Completa el formulario de registro con tus datos
-3. Inicia sesión con tu email y contraseña
-
-### Para Clientes
-1. **Crear Entrega**: Ve a "Crear Entrega" y completa el formulario
-2. **Seguir Entregas**: Ve a "Mis Entregas" para ver el estado
-3. **Confirmar Entrega**: Confirma cuando la entrega sea completada
-
-### Para Motociclistas
-1. **Ver Disponibles**: Ve a "Entregas Disponibles" para ver ofertas
-2. **Aceptar Entrega**: Haz clic en "Aceptar Entrega" en la que te interese
-3. **Gestionar Entregas**: Ve a "Mis Entregas" para iniciar y completar
-4. **Navegar**: Usa el botón "Navegar" para abrir Google Maps
-
-## 🎨 Personalización
-
-### Temas y Colores
-Los colores y temas se pueden personalizar en:
-- `src/App.tsx` - Configuración del tema principal
-- `src/utils/constants.ts` - Colores y configuraciones de la app
-
-### Componentes
-Los componentes están diseñados para ser reutilizables y personalizables:
-- `DeliveryCard` - Tarjeta de entrega reutilizable
-- `MainLayout` - Layout principal con sidebar
-- `ErrorBoundary` - Manejo de errores global
-
-## 🔒 Seguridad
-
-- **Autenticación**: Implementada con Supabase Auth
-- **Autorización**: Row Level Security (RLS) en PostgreSQL
-- **Validación**: Validación de formularios en frontend y backend
-- **Hashing**: Contraseñas hasheadas con bcryptjs
-- **HTTPS**: Recomendado para producción
+Informe: Desarrollo Full Stack de Aplicación - Prueba Técnica
+Objetivo:
+ El objetivo de este proyecto fue desarrollar un prototipo funcional de una aplicación que conectará a personas que necesitan enviar sobres con personas que tienen motocicletas disponibles para realizar entregas. Para esta prueba técnica, se decidió realizar únicamente la aplicación móvil, ya que se consideró más compleja en su desarrollo, lo que permitía demostrar mejor las capacidades del prototipo.
+Tecnologías Utilizadas:
+Frontend: React Native, Expo.
 
 
+Backend: Node.js con Supabase.
 
+
+Base de Datos: Supabase (PostgreSQL).
+
+
+Autenticación: bcrypt para la contraseña hasheada.
+
+
+Desarrollo y Funcionalidad:
+Estructura y Registro:
+
+
+Al inicio de la aplicación, los usuarios deben elegir el rol que desean desempeñar: Transportador o Cliente.
+
+
+Posteriormente, tienen la opción de registrarse mediante un login si ya están registrados.
+
+
+Interfaz de Usuario:
+
+
+Una vez registrado, los usuarios (clientes o transportistas) verán una barra inferior con tres opciones: Inicio, Listado y Perfil. Aunque las opciones son las mismas para ambos roles, cada uno tiene funciones distintas según su rol:
+
+
+Cliente: Puede crear un pedido de envío que será visible instantáneamente para los transportistas.
+
+
+Transportista: Puede ver los pedidos disponibles y aceptar aquellos que desea entregar. El transportista tiene la capacidad de aceptar múltiples pedidos.
+
+
+Funcionalidad de Entrega:
+
+
+Cuando un transportista decide realizar una entrega, puede presionar la opción En camino, lo que abrirá una ventana de navegación con un mapa integrado. Los botones de Confirmación de entrega y Cancelar también estarán disponibles en esta ventana.
+
+
+Una vez entregado, el pedido se marca como Entregado en el sistema, y el cliente debe confirmar la recepción del sobre.
+
+
+Distribución de Ganancias:
+
+
+La ganancia se divide de forma predeterminada en un 80% para el transportista y 20% para la plataforma, asegurando una compensación adecuada para los transportistas.
+
+
+Seguridad:
+
+
+Se implementó bcrypt para el hasheo de contraseñas, lo que garantiza una gestión segura de las credenciales de los usuarios.
+
+
+Demostración Funcional:
+ Todas las funciones realizadas en la aplicación cumplen con los requisitos establecidos y ejecutan correctamente las tareas mencionadas. Se adjunta un video junto a esta entrega que muestra una demostración del prototipo funcional.
+Inteligencia Artificial:
+ Para mejorar la aplicación, la inteligencia artificial podría ser aplicada en los siguientes aspectos:
+Gestión de rutas: Utilizando algoritmos de optimización de rutas para mejorar la eficiencia en las entregas y minimizar los tiempos de desplazamiento.
+
+
+Recomendación de precios: Un sistema basado en IA podría sugerir precios ajustados en tiempo real dependiendo de variables como la distancia, urgencia o demanda.
+
+
+Optimización de asignación de envíos: La IA podría optimizar la distribución de solicitudes de entrega entre los transportistas, teniendo en cuenta su ubicación y carga de trabajo.
+
+
+Escalabilidad:
+ Se utilizó React Native junto con Supabase y PostgreSQL para garantizar que la aplicación pueda escalar eficientemente a miles de usuarios, ya que esta tecnología permite un desarrollo multiplataforma (iOS, Android y Web). React Native permite mantener la misma base de código para todas las plataformas, lo que facilita el mantenimiento y escalabilidad de la aplicación en múltiples dispositivos. Además, se eligió PostgreSQL como base de datos debido a su estabilidad y capacidad para manejar grandes volúmenes de datos de forma eficiente.
+Conclusión:
+ Este proyecto demuestra la capacidad de desarrollar una aplicación funcional y escalable que conecta a clientes y motociclistas para la entrega de sobres. A pesar de ser una versión simplificada, el sistema desarrollado cubre correctamente todas las funcionalidades.
