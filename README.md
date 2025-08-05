@@ -1,4 +1,4 @@
-# Sobrapp Web - Plataforma de Entregas
+# Sobrapp - Plataforma de Entregas
 
 Una aplicación web moderna para conectar clientes que necesitan enviar sobres con motociclistas disponibles para entregas, desarrollada con React, TypeScript y Material-UI.
 
@@ -155,3 +155,4 @@ Los componentes están diseñados para ser reutilizables y personalizables:
 - **Validación**: Validación de formularios en frontend y backend
 - **Hashing**: Contraseñas hasheadas con bcryptjs
 - **HTTPS**: Recomendado para producción
+
