@@ -46,41 +46,6 @@ Una aplicación web moderna para conectar clientes que necesitan enviar sobres c
 - **ESLint** - Linting de código
 - **Prettier** - Formateo de código
 
-## 📦 Instalación
-
-### Prerrequisitos
-- Node.js (versión 16 o superior)
-- npm o yarn
-- Cuenta de Supabase
-
-### Pasos de Instalación
-
-1. **Clonar el repositorio**
-   ```bash
-   git clone <repository-url>
-   cd sobrapp-web
-   ```
-
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
-
-3. **Configurar variables de entorno**
-   Crear un archivo `.env` en la raíz del proyecto:
-   ```env
-   REACT_APP_SUPABASE_URL=tu_url_de_supabase
-   REACT_APP_SUPABASE_ANON_KEY=tu_clave_anonima_de_supabase
-   ```
-
-4. **Iniciar el servidor de desarrollo**
-   ```bash
-   npm start
-   ```
-
-5. **Abrir en el navegador**
-   La aplicación estará disponible en `http://localhost:3000`
-
 ## 🏗️ Estructura del Proyecto
 
 ```
@@ -155,4 +120,5 @@ Los componentes están diseñados para ser reutilizables y personalizables:
 - **Validación**: Validación de formularios en frontend y backend
 - **Hashing**: Contraseñas hasheadas con bcryptjs
 - **HTTPS**: Recomendado para producción
+
 
