@@ -1,6 +1,4 @@
-Informe: Desarrollo Full Stack de Aplicación - Prueba Técnica
-Objetivo:
- El objetivo de este proyecto fue desarrollar un prototipo funcional de una aplicación que conectará a personas que necesitan enviar sobres con personas que tienen motocicletas disponibles para realizar entregas. Para esta prueba técnica, se decidió realizar únicamente la aplicación móvil, ya que se consideró más compleja en su desarrollo, lo que permitía demostrar mejor las capacidades del prototipo.
+El objetivo de este proyecto fue desarrollar un prototipo funcional de una aplicación que conectará a personas que necesitan enviar sobres con personas que tienen motocicletas disponibles para realizar entregas. Para esta prueba técnica, se decidió realizar únicamente la aplicación móvil, ya que se consideró más compleja en su desarrollo, lo que permitía demostrar mejor las capacidades del prototipo.
 Tecnologías Utilizadas:
 Frontend: React Native, Expo.
 
@@ -74,3 +72,4 @@ Escalabilidad:
  Se utilizó React Native junto con Supabase y PostgreSQL para garantizar que la aplicación pueda escalar eficientemente a miles de usuarios, ya que esta tecnología permite un desarrollo multiplataforma (iOS, Android y Web). React Native permite mantener la misma base de código para todas las plataformas, lo que facilita el mantenimiento y escalabilidad de la aplicación en múltiples dispositivos. Además, se eligió PostgreSQL como base de datos debido a su estabilidad y capacidad para manejar grandes volúmenes de datos de forma eficiente.
 Conclusión:
  Este proyecto demuestra la capacidad de desarrollar una aplicación funcional y escalable que conecta a clientes y motociclistas para la entrega de sobres. A pesar de ser una versión simplificada, el sistema desarrollado cubre correctamente todas las funcionalidades.
+
